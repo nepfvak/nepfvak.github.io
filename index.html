@@ -4,10 +4,15 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>AdNova — Digital Cosmos</title>
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="static/css/style.css">
 </head>
+
 <body id="top">
   <!-- Background layers -->
   <canvas id="particles" aria-hidden="true"></canvas>
@@ -33,16 +38,13 @@
     </div>
   </header>
 
-  <div class="blob-layer">
-  <div class="blob blob-a"></div>
-  <div class="blob blob-b"></div>
-</div>
-
   <!-- Hero -->
   <section id="home" class="section hero reveal-up">
     <div class="container hero-content">
       <h1>Navigate the <span class="accent">Digital Cosmos</span></h1>
-      <p class="hero-sub">We engineer <strong>data-smart media</strong> and <strong>technology</strong> that compound your advantage.</p>
+      <p class="hero-sub">
+        We engineer <strong>data-smart media</strong> and <strong>technology</strong> that compound your advantage.
+      </p>
       <div class="hero-cta">
         <a href="#services" class="btn btn-primary magnet">See Our Work</a>
         <a href="#contact" class="btn btn-ghost magnet">Let’s Talk</a>
@@ -80,23 +82,22 @@
   </section>
 
   <!-- About -->
- <section class="section about" class='section-light reveal-up' id="about">
-  <div class="about-content">
-    <h2>About</h2>
-    <h3>Independent. Outcome-obsessed. Sustainability-minded.</h3>
-    <p>
-      We blend media, data science, and product thinking to create compounding
-      advantage. No fluff — just impact.
-    </p>
-  </div>
+  <section id="about" class="section about reveal-up">
+    <div class="about-content">
+      <h2>About</h2>
+      <h3>Independent. Outcome-obsessed. Sustainability-minded.</h3>
+      <p>
+        We blend media, data science, and product thinking to create compounding
+        advantage. No fluff — just impact.
+      </p>
+    </div>
 
-  <div class="about-buttons">
-    <button>Privacy-first measurement</button>
-    <button>Transparent experimentation</button>
-    <button>Carbon-aware delivery</button>
-  </div>
-</section>
-
+    <div class="about-buttons">
+      <button>Privacy-first measurement</button>
+      <button>Transparent experimentation</button>
+      <button>Carbon-aware delivery</button>
+    </div>
+  </section>
 
   <!-- Contact -->
   <section id="contact" class="section section-dark reveal-up">
@@ -126,7 +127,7 @@
 
   <!-- Footer -->
   <section class="section footer">
-   <div class="container footer-inner">
+    <div class="container footer-inner">
       <a class="logo small" href="#top"><span class="logo-dot"></span> AdNova</a>
       <p class="copy">© <span id="year"></span> AdNova.</p>
       <div class="social">
@@ -135,8 +136,7 @@
         <a href="#" aria-label="GitHub">GH</a>
       </div>
     </div>
-</section>
-
+  </section>
 
   <!-- Floating chat widget -->
   <div id="chat-bubble" aria-label="Chat with Gemini">💬</div>
@@ -150,7 +150,12 @@
   </div>
 
   <!-- Scripts -->
-  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  <script src="static/js/script.js"></script>
+  <script src="static/js/chat.js"></script>
+</body>
+</html>
+
   <script src="{{ url_for('static', filename='js/chat.js') }}"></script>
 </body>
 </html>
+
