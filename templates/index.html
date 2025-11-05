@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AdNova — Digital Cosmos</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body id="top">
+  <!-- Background layers -->
+  <canvas id="particles" aria-hidden="true"></canvas>
+  <div class="blob blob-a"></div>
+  <div class="blob blob-b"></div>
+  <div class="grid-overlay" aria-hidden="true"></div>
+
+  <!-- Nav -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a class="logo" href="#top"><span class="logo-dot"></span> AdNova</a>
+      <nav class="nav">
+        <ul class="nav-list" id="navList">
+          <li><a class="nav-link" href="#home">Home</a></li>
+          <li><a class="nav-link" href="#services">Services</a></li>
+          <li><a class="nav-link" href="#about">About</a></li>
+          <li><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <div class="blob-layer">
+  <div class="blob blob-a"></div>
+  <div class="blob blob-b"></div>
+</div>
+
+  <!-- Hero -->
+  <section id="home" class="section hero reveal-up">
+    <div class="container hero-content">
+      <h1>Navigate the <span class="accent">Digital Cosmos</span></h1>
+      <p class="hero-sub">We engineer <strong>data-smart media</strong> and <strong>technology</strong> that compound your advantage.</p>
+      <div class="hero-cta">
+        <a href="#services" class="btn btn-primary magnet">See Our Work</a>
+        <a href="#contact" class="btn btn-ghost magnet">Let’s Talk</a>
+      </div>
+    </div>
+    <div class="diagonal-slice bottom"></div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="section section-dark reveal-up">
+    <div class="container">
+      <header class="section-head">
+        <h2>Core Services</h2>
+        <p class="muted">Strategy, data, and execution — under one roof.</p>
+      </header>
+      <div class="cards">
+        <article class="card reveal-up">
+          <div class="card-ico">📈</div>
+          <h3>Analytics & AI</h3>
+          <p>Forecasting, MMM, experimentation, insight pipelines.</p>
+        </article>
+        <article class="card reveal-up delay-100">
+          <div class="card-ico">🧭</div>
+          <h3>Media Strategy</h3>
+          <p>Holistic planning and orchestration for measurable lift.</p>
+        </article>
+        <article class="card reveal-up delay-200">
+          <div class="card-ico">⚙️</div>
+          <h3>Tech Enablement</h3>
+          <p>Clean stacks, dashboards, automation at scale.</p>
+        </article>
+      </div>
+    </div>
+    <div class="diagonal-slice top"></div>
+  </section>
+
+  <!-- About -->
+ <section class="section about" class='section-light reveal-up' id="about">
+  <div class="about-content">
+    <h2>About</h2>
+    <h3>Independent. Outcome-obsessed. Sustainability-minded.</h3>
+    <p>
+      We blend media, data science, and product thinking to create compounding
+      advantage. No fluff — just impact.
+    </p>
+  </div>
+
+  <div class="about-buttons">
+    <button>Privacy-first measurement</button>
+    <button>Transparent experimentation</button>
+    <button>Carbon-aware delivery</button>
+  </div>
+</section>
+
+
+  <!-- Contact -->
+  <section id="contact" class="section section-dark reveal-up">
+    <div class="container">
+      <header class="section-head">
+        <h2>Let’s Work Together</h2>
+        <p class="muted">Tell us your goal; we’ll chart the route.</p>
+      </header>
+      <div class="panel">
+        <form class="form" onsubmit="event.preventDefault(); alert('Submitted!')">
+          <div class="row">
+            <label> Name
+              <input type="text" placeholder="Ada Lovelace" required />
+            </label>
+            <label> Email
+              <input type="email" placeholder="ada@example.com" required />
+            </label>
+          </div>
+          <label> Message
+            <textarea rows="4" placeholder="What are you building?"></textarea>
+          </label>
+          <button class="btn btn-primary magnet" type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <section class="section footer">
+   <div class="container footer-inner">
+      <a class="logo small" href="#top"><span class="logo-dot"></span> AdNova</a>
+      <p class="copy">© <span id="year"></span> AdNova.</p>
+      <div class="social">
+        <a href="#" aria-label="X">𝕏</a>
+        <a href="#" aria-label="LinkedIn">in</a>
+        <a href="#" aria-label="GitHub">GH</a>
+      </div>
+    </div>
+</section>
+
+
+  <!-- Floating chat widget -->
+  <div id="chat-bubble" aria-label="Chat with Gemini">💬</div>
+  <div id="chat-box" class="hidden" role="dialog" aria-label="Gemini chat">
+    <div id="chat-header">Gemini Help</div>
+    <div id="chat-body"></div>
+    <div id="chat-input">
+      <input id="prompt" type="text" placeholder="Ask me anything…" />
+      <button id="send" title="Send">➤</button>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/chat.js') }}"></script>
+</body>
+</html>
